@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,13 +11,13 @@
   <title>SB Admin - Dashboard</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -29,7 +28,7 @@
     <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-      <i class="fas fa-bars"></i>
+      <i class="fa fa-bars"></i>
     </button>
 
     <!-- Navbar Search -->
@@ -38,7 +37,7 @@
         <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
           <button class="btn btn-primary" type="button">
-            <i class="fas fa-search"></i>
+            <i class="fa fa-search"></i>
           </button>
         </div>
       </div>
@@ -48,7 +47,7 @@
     <ul class="navbar-nav ml-auto ml-md-0">
       <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"></i>
+          <i class="fa fa-bell fa-fw"></i>
           <span class="badge badge-danger">9+</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
@@ -60,7 +59,7 @@
       </li>
       <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-envelope fa-fw"></i>
+          <i class="fa fa-envelope fa-fw"></i>
           <span class="badge badge-danger">7</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
@@ -72,7 +71,7 @@
       </li>
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-circle fa-fw"></i>
+          <i class="fa fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Settings</a>
@@ -91,13 +90,13 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fa fa-fw fa-tachometer" aria-hidden="true"></i>
           <span>Dashboard</span>
         </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fa fa-fw fa-folder"></i>
           <span>Pages</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -113,12 +112,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fa fa-fw fa-area-chart"></i>
           <span>Charts</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
+          <i class="fa fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
     </ul>
@@ -141,14 +140,14 @@
             <div class="card text-white bg-primary o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fas fa-fw fa-comments"></i>
+                  <i class="fa fa-fw fa-comments"></i>
                 </div>
                 <div class="mr-5">26 New Messages!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fa fa-angle-right"></i>
                 </span>
               </a>
             </div>
@@ -157,14 +156,14 @@
             <div class="card text-white bg-warning o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fas fa-fw fa-list"></i>
+                  <i class="fa fa-fw fa-list"></i>
                 </div>
                 <div class="mr-5">11 New Tasks!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fa fa-angle-right"></i>
                 </span>
               </a>
             </div>
@@ -173,14 +172,14 @@
             <div class="card text-white bg-success o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fas fa-fw fa-shopping-cart"></i>
+                  <i class="fa fa-fw fa-shopping-cart"></i>
                 </div>
                 <div class="mr-5">123 New Orders!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fa fa-angle-right"></i>
                 </span>
               </a>
             </div>
@@ -189,14 +188,14 @@
             <div class="card text-white bg-danger o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fas fa-fw fa-life-ring"></i>
+                  <i class="fa fa-fw fa-life-ring"></i>
                 </div>
                 <div class="mr-5">13 New Tickets!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fa fa-angle-right"></i>
                 </span>
               </a>
             </div>
@@ -206,7 +205,7 @@
         <!-- Area Chart Example-->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fas fa-chart-area"></i>
+            <i class="fa fa-chart-area"></i>
             Area Chart Example</div>
           <div class="card-body">
             <canvas id="myAreaChart" width="100%" height="30"></canvas>
@@ -217,7 +216,7 @@
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fas fa-table"></i>
+            <i class="fa fa-table"></i>
             Data Table Example</div>
           <div class="card-body">
             <div class="table-responsive">
@@ -726,7 +725,7 @@
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+    <i class="fa fa-angle-up"></i>
   </a>
 
   <!-- Logout Modal-->
@@ -749,23 +748,23 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/chart.js/Chart.min.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="<?php echo base_url(); ?>/vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
+  <script src="<?php echo base_url(); ?>/js/sb-admin.min.js"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="<?php echo base_url(); ?>/js/demo/datatables-demo.js"></script>
+  <script src="<?php echo base_url(); ?>/js/demo/chart-area-demo.js"></script>
 
 </body>
 
