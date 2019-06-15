@@ -7,7 +7,6 @@ class Tournaments extends CI_Controller {
 		$this->load->model('TournamentModel');
 		
 		$data['query'] = $this->TournamentModel->getTournaments();
-		$data['title'] = 'Tournaments';
 
 		$this->load->view('header', $data);
 		$this->load->view('nav');
@@ -39,7 +38,7 @@ class Tournaments extends CI_Controller {
 		{
 			$this->TournamentModel->addTournament();
 
-			$data['message'] = "Tournament added!";
+			$data['message'] = "Tournament added successfully!";
 
 			$this->load->view('header', $data);
 			$this->load->view('nav');
@@ -73,7 +72,7 @@ class Tournaments extends CI_Controller {
 		{
 			$this->TournamentModel->editTournament($id);
 
-			$data['message'] = "Tournament updated!";
+			$data['message'] = "Tournament updated successfully!";
 
 			$this->load->view('header', $data);
 			$this->load->view('nav');
@@ -85,10 +84,9 @@ class Tournaments extends CI_Controller {
 	public function remove($id)
 	{
 		$this->load->model('TournamentModel');
-		
 		$this->TournamentModel->removeTournament($id);
 
-		$data['message'] = "Tournament deleted!";
+		$data['message'] = "Tournament deleted successfully!";
 
 		$this->load->view('header', $data);
 		$this->load->view('nav');
