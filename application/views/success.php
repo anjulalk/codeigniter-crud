@@ -17,7 +17,7 @@
 	</div>
 
 
-  <button type="submit" class="btn btn-primary">Continue</button>
+  <button type="submit" class="btn btn-success">OK</button>
 </form> 
 </div>
 </div>

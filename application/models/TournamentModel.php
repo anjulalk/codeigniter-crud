@@ -10,8 +10,8 @@ public function getTournaments()
 public function getTournament($id)
 {
 		$this->db->where('id', $id);
-		$query = $this->db->get('Tournaments');
-		return $query->result();
+		$query = $this->db->get('Tournaments', 1);
+		return $query->result()[0];
 }
 
 public function addTournament()

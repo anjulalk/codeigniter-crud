@@ -5,7 +5,6 @@ class Tournaments extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('TournamentModel');
-		
 		$data['query'] = $this->TournamentModel->getTournaments();
 
 		$this->load->view('header', $data);
@@ -16,10 +15,6 @@ class Tournaments extends CI_Controller {
 
 	public function add()
 	{
-		$this->load->model('TournamentModel');
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-
 		$data['title'] = 'Add Tournament';
 	
 		$this->form_validation->set_rules('name', 'Name', 'required');
@@ -36,6 +31,7 @@ class Tournaments extends CI_Controller {
 		}
 		else
 		{
+			$this->load->model('TournamentModel');
 			$this->TournamentModel->addTournament();
 
 			$data['message'] = "Tournament added successfully!";
@@ -49,11 +45,9 @@ class Tournaments extends CI_Controller {
 
 	public function edit($id)
 	{
-		$this->load->model('TournamentModel');
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-
 		$data['title'] = 'Edit Tournament';
+
+		$this->load->model('TournamentModel');
 		$data['query'] = $this->TournamentModel->getTournament($id);
 
 		$this->form_validation->set_rules('name', 'Name', 'required');

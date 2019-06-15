@@ -12,28 +12,28 @@
 					</div>
 				<div class="card-body">
 				<?php echo validation_errors(); ?>
-				<?php echo form_open("Tournaments/edit/".$query[0]->id);?>
+				<?php echo form_open("Tournaments/edit/".$query->id);?>
 				<div class="form-group">
     <label for="id">Tournament ID:</label>
-    <input type="text" value="<?php echo $query[0]->id ?>" disabled name="id" class="form-control" id="name">
+    <input type="text" value="<?php echo $query->id ?>" disabled name="id" class="form-control" id="name">
   </div>
 
 				<div class="form-group">
     <label for="name">Name:</label>
-    <input type="text" name="name" value="<?php echo $query[0]->name ?>" class="form-control" id="name">
+    <input type="text" name="name" value="<?php echo $query->name ?>" class="form-control" id="name">
   </div>
 
   <div class="form-group">
     <label for="place">Place:</label>
-    <input type="text" name="place" value="<?php echo $query[0]->place ?>" class="form-control" id="place">
+    <input type="text" name="place" value="<?php echo $query->place ?>" class="form-control" id="place">
   </div>
   <div class="form-group">
     <label for="date">Date:</label>
-    <input type="date" name="date" value="<?php echo $query[0]->date ?>" class="form-control" id="date">
+    <input type="date" name="date" value="<?php echo $query->date ?>" class="form-control" id="date">
   </div>
   <div class="form-group">
     <label for="opposing_teams">Opposing teams:</label>
-    <input type="name" name="opposing_teams" value="<?php echo $query[0]->opposing_teams ?>"class="form-control" id="opposing_teams">
+    <input type="name" name="opposing_teams" value="<?php echo $query->opposing_teams ?>"class="form-control" id="opposing_teams">
   </div>
 
   <button type="submit" class="btn btn-primary">Update</button>
