@@ -1,13 +1,13 @@
           <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="col-xl-6 col-sm-6 mb-3">
             <div class="card text-white bg-success o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fa fa-fw fa-shopping-cart"></i>
+                  <i class="fa fa-fw fa-futbol-o"></i>
                 </div>
-                <div class="mr-5">View Players</div>
+                <div class="mr-5">View Tournaments</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url()?>index.php/Players">
+              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url("index.php/Tournaments")?>">
                 <span class="float-right">
                   <i class="fa fa-angle-right"></i>
                 </span>
@@ -15,15 +15,15 @@
             </div>
           </div>
         
-          <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="col-xl-6 col-sm-6 mb-3">
             <div class="card text-white bg-primary o-hidden h-100">
               <div class="card-body">
                 <div class="card-body-icon">
-                  <i class="fa fa-fw fa-comments"></i>
+                  <i class="fa fa-fw fa-plus"></i>
                 </div>
-                <div class="mr-5">Add Players</div>
+                <div class="mr-5">Add Tournaments</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url()?>index.php/Players/add">
+              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url("index.php/Tournaments/add")?>">
                 <span class="float-right">
                   <i class="fa fa-angle-right"></i>
                 </span>
@@ -31,35 +31,5 @@
             </div>
           </div>
           
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-warning o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-list"></i>
-                </div>
-                <div class="mr-5">Edit Players</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url()?>index.php/Players/edit">
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-danger o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-life-ring"></i>
-                </div>
-                <div class="mr-5">Remove Players</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url()?>index.php/Players/remove">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
+
         </div>
