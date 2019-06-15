@@ -17,11 +17,11 @@ class Tournaments extends CI_Controller {
 
 	public function add()
 	{
-		$data['title'] = 'Add Tournament';
-		
 		$this->load->model('TournamentModel');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+
+		$data['title'] = 'Add Tournament';
 	
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('place', 'Place', 'required');
@@ -48,13 +48,14 @@ class Tournaments extends CI_Controller {
 		}
 	}
 
-	public function edit()
+	public function edit($id)
 	{
-		$data['title'] = 'Edit Tournament';
-
 		$this->load->model('TournamentModel');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+
+		$data['title'] = 'Edit Tournament';
+		$data['query'] = $this->TournamentModel->getTournament($id);
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('place', 'Place', 'required');
@@ -65,12 +66,12 @@ class Tournaments extends CI_Controller {
 		{
 			$this->load->view('header', $data);
 			$this->load->view('nav');
-			$this->load->view('edit_tournament');
+			$this->load->view('edit_tournament', $data);
 			$this->load->view('footer');
 		}
 		else
 		{
-			$this->TournamentModel->updateTournament();
+			$this->TournamentModel->editTournament($id);
 
 			$data['message'] = "Tournament updated!";
 
@@ -79,19 +80,19 @@ class Tournaments extends CI_Controller {
 			$this->load->view('success', $data);
 			$this->load->view('footer');
 		}
-
-		$this->load->view('header', $data);
-		$this->load->view('nav');
-		$this->load->view('edit_tournament');
-		$this->load->view('footer');
 	}
 
-	public function remove()
+	public function remove($id)
 	{
-		$data['title'] = 'Remove Tournament';
+		$this->load->model('TournamentModel');
+		
+		$this->TournamentModel->removeTournament($id);
+
+		$data['message'] = "Tournament deleted!";
+
 		$this->load->view('header', $data);
 		$this->load->view('nav');
-		$this->load->view('remove_tournament');
+		$this->load->view('success', $data);
 		$this->load->view('footer');
 	}
 

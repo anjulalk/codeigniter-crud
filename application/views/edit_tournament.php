@@ -11,23 +11,29 @@
 					Edit Tournament
 					</div>
 				<div class="card-body">
-				<form action="/action_page.php">
-		<div class="form-group">
+				<?php echo validation_errors(); ?>
+				<?php echo form_open("Tournaments/edit/".$query[0]->id);?>
+				<div class="form-group">
+    <label for="id">Tournament ID:</label>
+    <input type="text" value="<?php echo $query[0]->id ?>" disabled name="id" class="form-control" id="name">
+  </div>
+
+				<div class="form-group">
     <label for="name">Name:</label>
-    <input type="name" class="form-control" id="name">
+    <input type="text" name="name" value="<?php echo $query[0]->name ?>" class="form-control" id="name">
   </div>
 
   <div class="form-group">
     <label for="place">Place:</label>
-    <input type="name" class="form-control" id="place">
+    <input type="text" name="place" value="<?php echo $query[0]->place ?>" class="form-control" id="place">
   </div>
   <div class="form-group">
     <label for="date">Date:</label>
-    <input type="date" class="form-control" id="date">
+    <input type="date" name="date" value="<?php echo $query[0]->date ?>" class="form-control" id="date">
   </div>
   <div class="form-group">
     <label for="opposing_teams">Opposing teams:</label>
-    <input type="name" class="form-control" id="opposing_teams">
+    <input type="name" name="opposing_teams" value="<?php echo $query[0]->opposing_teams ?>"class="form-control" id="opposing_teams">
   </div>
 
   <button type="submit" class="btn btn-primary">Update</button>

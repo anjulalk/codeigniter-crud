@@ -9,6 +9,7 @@ public function getTournaments()
 
 public function getTournament($id)
 {
+		$this->db->where('id', $id);
 		$query = $this->db->get('Tournaments');
 		return $query->result();
 }
@@ -25,22 +26,22 @@ public function addTournament()
 		$this->db->insert('Tournaments', $data);
 }
 
-public function editTournament()
+public function editTournament($id)
 {
-		$this->title    = $_POST['title'];
-		$this->content  = $_POST['content'];
-		$this->date     = time();
+	$data = array(
+		'id' => $id,
+		'name' => $this->input->post('name'),
+		'place' => $this->input->post('place'),
+		'date' => $this->input->post('date'),
+		'opposing_teams' => $this->input->post('opposing_teams')
+	);
 
-		$this->db->update('entries', $this, array('id' => $_POST['id']));
+	$this->db->replace('Tournaments', $data);
 }
 
-public function deleteTournament()
+public function removeTournament($id)
 {
-		$this->title    = $_POST['title'];
-		$this->content  = $_POST['content'];
-		$this->date     = time();
-
-		$this->db->update('entries', $this, array('id' => $_POST['id']));
+		$this->db->delete('Tournaments', array('id'=>$id));
 }
 
 }
